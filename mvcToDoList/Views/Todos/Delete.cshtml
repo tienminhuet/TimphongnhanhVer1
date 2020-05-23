@@ -1,0 +1,58 @@
+﻿@model mvcToDoList.Models.Todos
+
+@{
+    ViewBag.Title = "Delete";
+}
+    <header style="margin-left:40%">
+        <h2 style="color:white">Delete</h2>
+
+        <h3 style="color:red"><b>Bạn có chắc muốn xóa nó?</b></h3>
+    </header>
+
+<div style="margin-left:40%">
+    <h4 style="color:white">Aministrators</h4>
+    <hr />
+    <dl class="dl-horizontal" style="color:white">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DueDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DueDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Attributes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Attributes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Priority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Priority)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <span class="btn btn-secondary">@Html.ActionLink("Back to List", "Index")</span>
+        </div>
+    }
+</div>

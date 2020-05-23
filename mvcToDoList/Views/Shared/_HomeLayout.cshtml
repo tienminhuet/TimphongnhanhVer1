@@ -1,0 +1,298 @@
+﻿
+@{
+    Layout = null;
+}
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="The Estate Teplate">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/styles/bootstrap4/bootstrap.min.css">
+    <link href="~/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="~/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="~/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="~/plugins/OwlCarousel2-2.2.1/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/styles/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="~/styles/responsive.css">
+    
+</head>
+
+<body>
+
+    <div class="super_container">
+
+        <!-- Home -->
+        <div class="home">
+
+            <!-- Home Slider -->
+            <div class="home_slider_container">
+                <div class="owl-carousel owl-theme home_slider">
+
+                    <!-- Home Slider Item -->
+                    <div class="owl-item home_slider_item">
+
+                        <div class="home_slider_background" style="background-image:url(/images/home_slider_bcg.jpg)"></div>
+                        <div class="home_slider_content_container text-center">
+                            <div class="home_slider_content">
+                                <h2 data-animation-in="flipinx" data-animation-out="animate-out fadeout">Timphongnhanh.com</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Home Slider Item -->
+                    <div class="owl-item home_slider_item">
+
+                        <div class="home_slider_background" style="background-image:url(/images/home_slider_bcg.jpg)"></div>
+                        <div class="home_slider_content_container text-center">
+                            <div class="home_slider_content">
+                                <h2 data-animation-in="flipInX" data-animation-out="animate-out fadeOut">Timphongnhanh.com</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Home Slider Item -->
+                    <div class="owl-item home_slider_item">
+
+                        <div class="home_slider_background" style="background-image:url(/images/home_slider_bcg.jpg)"></div>
+                        <div class="home_slider_content_container text-center">
+                            <div class="home_slider_content">
+                                <h2 data-animation-in="flipInX" data-animation-out="animate-out fadeOut">Timphongnhanh.com</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Home Slider Nav -->
+                <div class="home_slider_nav_left home_slider_nav d-flex flex-row align-items-center justify-content-end">
+                    <img src="~/images/nav_left.png" alt="">
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Header -->
+
+        <header class="header trans_300">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="header_container d-flex flex-row align-items-center trans_300">
+
+                            <!-- Logo -->
+
+                            <div class="logo_container">
+                                <a href="#">
+                                    <div class="logo">
+                                        <img src="~/images/logo.png" alt="">
+                                        <span style="font-size:initial">TimPhongNhanh</span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Main Navigation -->
+
+                            <nav class="main_nav">
+                                
+                                <ul class="main_nav_list">
+                                    <li class="main_nav_item">@Html.ActionLink("Trang chủ", "Index", "Home")</li>
+                                    <li class="main_nav_item">@Html.ActionLink("Thông tin", "About", "Home")</li>
+                                    <li class="main_nav_item">@Html.ActionLink("Danh sách", "Listings", "Home")</li>
+                                    <li class="main_nav_item">@Html.ActionLink("Tin tức", "News", "Home")</li>
+                                    <li class="main_nav_item">@Html.ActionLink("Liên Hệ", "Contact", "Home")</li>
+                                   @*<li class="main_nav_item">@Html.ActionLink("Assignment", "Assignment", "Home")</li>*@
+                                  
+
+                                </ul>
+                            </nav>
+
+                                <span>@Html.Partial("_LoginPartial")</span> 
+                    
+
+                            <div class="hamburger_container menu_mm">
+                                <div class="hamburger menu_mm">
+                                    <i class="fas fa-bars trans_200 menu_mm"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu -->
+
+            <div class="menu menu_mm">
+                <ul class="menu_list">
+                    <li class="menu_item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="#">Trang Chủ</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu_item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="about.html">about us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu_item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="listings.html">listings</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu_item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="news.html">news</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu_item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="contact.html">contact</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </header>
+
+        <!-- Search Box -->
+        @RenderBody()
+
+
+        <!-- Footer -->
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Footer About -->
+
+                    <div class="col-lg-3 footer_col">
+                        <div class="footer_col_title">
+                            <div class="logo_container">
+                                <a href="#">
+                                    <div class="logo">
+                                        <img src="~/images/logo.png" alt="">
+                                        <span>Timphongnhanh</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="footer_social">
+                            <ul class="footer_social_list">
+                                <li class="footer_social_item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                                <li class="footer_social_item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="footer_social_item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li class="footer_social_item"><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                                <li class="footer_social_item"><a href="#"><i class="fab fa-behance"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="footer_about">
+                            <p>Sản phẩm được thực hiện bởi các thành viên nhóm hiện tại nó chỉ mới được hiện thực hóa nên hệ thống chưa được hoàn thiện, đây chỉ là mô hình demo được tạo ra dựa trên hệ thống đang mong muốn xây dựng.</p>
+                        </div>
+                    </div>
+
+                    <!-- Footer Useful Links -->
+
+                    <div class="col-lg-3 footer_col">
+                        <div class="footer_col_title">Thông tin hữu ích</div>
+                        <ul class="footer_useful_links">
+                            <li class="useful_links_item"><a href="#">Danh sách</a></li>
+                            <li class="useful_links_item"><a href="#">Khu vực ưa thích</a></li>
+                            <li class="useful_links_item"><a href="#">Phản hồi của khách hàng</a></li>
+                            <li class="useful_links_item"><a href="#">Danh sách nổi bật</a></li>
+                            <li class="useful_links_item"><a href="#">Thuộc tính Ưu đãi</a></li>
+                            <li class="useful_links_item"><a href="#">Những Dịch vụ</a></li>
+                            <li class="useful_links_item"><a href="#">Tin Tức</a></li>
+                            <li class="useful_links_item"><a href="#">Trung Tâm cho thuê của chúng tôi</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Footer Contact Form -->
+                    <div class="col-lg-3 footer_col">
+                        <div class="footer_col_title">Phản hồi</div>
+                        <div class="footer_contact_form_container">
+                            <form id="footer_contact_form" class="footer_contact_form" action="post">
+                                <input id="contact_form_name" class="input_field contact_form_name" type="text" placeholder="Name" required="required" data-error="Name is required.">
+                                <input id="contact_form_email" class="input_field contact_form_email" type="email" placeholder="E-mail" required="required" data-error="Valid email is required.">
+                                <textarea id="contact_form_message" class="text_field contact_form_message" name="message" placeholder="Message" required="required" data-error="Please, write us a message."></textarea>
+                                <button id="contact_send_btn" type="submit" class="contact_send_btn trans_200" value="Submit">Gửi</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Footer Contact Info -->
+
+                    <div class="col-lg-3 footer_col">
+                        <div class="footer_col_title">Thông tin liên hệ</div>
+                        <ul class="contact_info_list">
+                            <li class="contact_info_item d-flex flex-row">
+                                <div><div class="contact_info_icon"><img src="~/images/placeholder.svg" alt=""></div></div>
+                                <div class="contact_info_text">Số 44 Ngõ 337 Cầu Giấy</div>
+                            </li>
+                            <li class="contact_info_item d-flex flex-row">
+                                <div><div class="contact_info_icon"><img src="~/images/phone-call.svg" alt=""></div></div>
+                                <div class="contact_info_text">0964019058</div>
+                            </li>
+                            <li class="contact_info_item d-flex flex-row">
+                                <div><div class="contact_info_icon"><img src="~/images/message.svg" alt=""></div></div>
+                                <div class="contact_info_text"><a href="" target="_top">MinhTienk61uet@gmail.com</a></div>
+                            </li>
+                            <li class="contact_info_item d-flex flex-row">
+                                <div><div class="contact_info_icon"><img src="~/images/planet-earth.svg" alt=""></div></div>
+                                <div class="contact_info_text"><a href="">BaitaplonCMPM.com</a></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+        <!-- Credits -->
+
+        <div class="credits">
+            <span>
+               
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> <i class="fa fa-heart" aria-hidden="true"></i> by <a href="" target="_blank">Minhtien</a>
+              
+            </span>
+        </div>
+
+    </div>
+
+    <script src="~/js/jquery-3.2.1.min.js"></script>
+    <script src="~/styles/bootstrap4/popper.js"></script>
+    <script src="~/styles/bootstrap4/bootstrap.min.js"></script>
+    <script src="~/plugins/greensock/TweenMax.min.js"></script>
+    <script src="~/plugins/greensock/TimelineMax.min.js"></script>
+    <script src="~/plugins/scrollmagic/ScrollMagic.min.js"></script>
+    <script src="~/plugins/greensock/animation.gsap.min.js"></script>
+    <script src="~//greensock/ScrollToPlugin.min.js"></script>
+    <script src="~/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+    <script src="~/plugins/scrollTo/jquery.scrollTo.min.js"></script>
+    <script src="~/plugins/easing/easing.js"></script>
+    <script src="~/js/custom.js"></script>
+</body>
+

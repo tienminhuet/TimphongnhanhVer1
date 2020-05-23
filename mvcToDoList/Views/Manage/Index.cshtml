@@ -1,0 +1,100 @@
+﻿@model mvcToDoList.Models.IndexViewModel
+@using Microsoft.AspNet.Identity
+@using mvcToDoList.Models
+@{
+    ViewBag.Title = " ";
+}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+<h2>@ViewBag.Title.</h2>
+
+<p class="text-success">@ViewBag.StatusMessage</p>
+
+<div class="row" style="color:white;">
+    <div class="col-md-4" style="padding-left:8%">
+        <img src="~/images/person.jpg" class=" img-circle" alt="Hot girl">
+
+        <div style="padding-left:7%" class="testimonial_name">Trần Minh Tiến</div>
+
+    </div>
+    <div class="col-md-8">
+        <h4>Thay đổi cài đặt tài khoản của bạn</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>Địa chỉ:</dt>
+            <dd><span class="testimonial_title">Ngõ 92 đường Hàng Trống-  Hoàn Kiếm</span></dd>
+            <dt>Email:</dt>
+            <dd>
+                <span class="form-text"> @User.Identity.GetUserName()</span>
+                @*<b>@Html.ActionLink(" " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })</b>*@
+                @*@Html.ActionLink("Manage", "ManageLogins")*@
+            </dd>
+            <dt>Số điện thoại:</dt>
+            <dd>
+                @(Model.PhoneNumber ?? "chưa có")
+                @if (Model.PhoneNumber != null)
+                {
+                    @Html.ActionLink("Change", "AddPhoneNumber")
+                    @: &nbsp;|&nbsp;
+                    @Html.ActionLink("Remove", "RemovePhoneNumber")
+                }
+                else
+                {
+
+                    <span class="btn btn-light">@Html.ActionLink("+", "AddPhoneNumber")</span>
+                }
+
+            </dd>
+            <dt>Mật khẩu:</dt>
+            <dd>
+
+                @if (Model.HasPassword)
+                {
+                    <span class="form-text">***********</span>
+
+                    @*<span {@class="text-danger" }> @User.Identity.GetHashCode() </span>*@
+                    @*<input type="password" id="password" class="password" name="user_password">*@
+                    @*@User.Identity.GetHashCode()*@
+                    @*<br /><br />
+                <p>Nhập vào mật khẩu, sau đó nhấn "Hiển thị mật khẩu" để xem mật khẩu</p>*@
+
+                }
+                else
+                {
+                    @Html.ActionLink("Create", "SetPassword")
+                }
+
+            </dd>
+            <dt>
+                Xác thực tài khoản:
+            </dt>
+            <dd>
+
+                @if (Model.TwoFactor)
+                {
+                    using (Html.BeginForm("DisableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <text> Đã xác thực
+
+                        </text>
+                    }
+                }
+                else
+                {
+                    using (Html.BeginForm("EnableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <text>Đã xác thực
+
+                        </text>
+                    }
+                }
+            </dd>
+            <dd class="btn btn-light">@Html.ActionLink("Đổi mật khẩu", "ChangePassword")</dd>
+        </dl>
+    </div>
+
+</div>

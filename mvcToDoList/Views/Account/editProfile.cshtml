@@ -1,0 +1,124 @@
+﻿
+@{
+    ViewBag.Title = "editProfile";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<h2>editProfile</h2>
+
+@model mvcToDoList.Models.IndexViewModel
+@using Microsoft.AspNet.Identity
+@using mvcToDoList.Models
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+$(document).ready(function(){
+    $('input[type="password"]').after(' <input type="checkbox" class="check" /> Hiển thị mật khẩu');
+    $('.check').change(function(){
+        var prev = $(this).prev();
+        var value = prev.val();
+        var type = prev.attr('type');
+        var name = prev.attr('name');
+        var id = prev.attr('id');
+        var klass = prev.attr('class');
+        var new_type = (type == 'password') ? 'text' : 'password';
+        prev.remove();
+        $(this).before('<input type="'+new_type+'" value="' +value+ '" name="' +name+ '" value="' +value+ '"id="' +id+ '" class="' +klass+ '" />');
+
+    });
+})
+</script>
+
+<h2>@ViewBag.Title.</h2>
+
+<p class="text-success">@ViewBag.StatusMessage</p>
+
+<div class="row" style="color:white;">
+    <div style="padding-left:10%" class="col-md-4">
+        <div class="testimonial_image img-circle">
+            <img src="~/images/person1.jpg" alt="">
+        </div>
+        <div style="padding-left:7%" class="testimonial_name">Trần Minh Tiến</div>
+
+    </div>
+    <div class="col-md-8">
+        <h4>Thay đổi cài đặt tài khoản của bạn</h4>
+        <hr />
+        Địa chỉ:<div class="testimonial_title">Khách hàng từ khu vực Hoàn Kiếm</div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>Mật khẩu:</dt>
+            <dd>
+
+                @if (Model.HasPassword)
+                {
+                    <span class="form-text">@Html.ActionLink("Đổi mật khẩu", "ChangePassword")</span>
+
+                    <input type="password" id="password" class="password" name="user_password">
+                    @User.Identity.GetHashCode()
+                    <br /><br />
+                        <p>Nhập vào mật khẩu, sau đó nhấn "Hiển thị mật khẩu" để xem mật khẩu</p>
+
+                }
+                else
+                {
+                    @Html.ActionLink("Create", "SetPassword")
+                }
+
+            </dd>
+            <dt>Email:</dt>
+            <dd>
+
+                <span class="form-text"> @User.Identity.GetUserName()</span>
+                @*<b>@Html.ActionLink(" " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })</b>*@
+                @*@Html.ActionLink("Manage", "ManageLogins")*@
+            </dd>
+
+
+            <dt>Số điện thoại:</dt>
+            <dd>
+                @(Model.PhoneNumber ?? "chưa có số điện thoại")
+                @if (Model.PhoneNumber != null)
+                {
+                    @Html.ActionLink("Change", "AddPhoneNumber")
+                    @: &nbsp;|&nbsp;
+                    @Html.ActionLink("Remove", "RemovePhoneNumber")
+                }
+                else
+                {
+
+                    <span class="btn btn-light">@Html.ActionLink("Thêm +", "AddPhoneNumber")</span>
+                }
+
+            </dd>
+
+            <dt>
+                Xác thực hai yếu tố:
+            </dt>
+            <dd>
+
+                @if (Model.TwoFactor)
+                {
+                    using (Html.BeginForm("DisableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <text>Enabled
+                            <input type="submit" value="Disable" class="btn btn-link" />
+                        </text>
+                    }
+                }
+                else
+                {
+                    using (Html.BeginForm("EnableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <text>Disabled
+                            <input type="submit" value="Enable" class="btn btn-link" />
+                        </text>
+                    }
+                }
+            </dd>
+            <dd class="btn btn-outline-light">@Html.ActionLink("chỉnh sửa", "editProfile")</dd>
+        </dl>
+    </div>
+
+</div>

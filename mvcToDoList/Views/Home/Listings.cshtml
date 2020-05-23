@@ -1,0 +1,566 @@
+﻿
+@{
+    ViewBag.Title = "Listings";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+<link rel="stylesheet" type="text/css" href="~/styles/bootstrap4/bootstrap.min.css">
+<link href="~/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="~/styles/listings_styles.css">
+<link rel="stylesheet" type="text/css" href="~/styles/listings_responsive.css">
+
+<div class="listings">
+    <div class="container">
+        <div class="row">
+
+            <!-- Search Sidebar -->
+
+
+            <div class=" news col-lg-4 news_sidebar_col">
+                <div class="news_sidebar">
+                    <div class="sidebar_search">
+                        <form action="post">
+                            <div id="search_form" class="search_form">
+                                <input class="form-control" type="search" placeholder="Cầu giấy" width="70%" required="required" data-error="Valid keywords required.">
+                              
+                                    
+                               
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Archives -->
+                    <div class="sidebar_section">
+                        <div class="sidebar_title">archives</div>
+                        <ul class="sidebar_list">
+                            <li class="sidebar_list_item"><a href="#">4 2019</a></li>
+                            <li class="sidebar_list_item"><a href="#">5 2019</a></li>
+                            <li class="sidebar_list_item"><a href="#">6 2019</a></li>
+                            <li class="sidebar_list_item"><a href="#">7 2019</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="sidebar_section">
+                        <div class="sidebar_title">categories</div>
+                        <ul class="sidebar_list">
+                            <li class="sidebar_list_item"><a href="#">Chưa phân loại</a></li>
+                            <li class="sidebar_list_item"><a href="#">Thông tin hữu ích</a></li>
+                            <li class="sidebar_list_item"><a href="#">Sự kiện</a></li>
+                            <li class="sidebar_list_item"><a href="#">Cách chọn phòng thông minh</a></li>
+                            <li class="sidebar_list_item"><a href="#">Chủ trọ</a></li>
+                            <li class="sidebar_list_item"><a href="#">Địa điểm phòng trọ</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Latest Posts -->
+                    <div class="sidebar_section">
+                        <div class="sidebar_title">
+                            bài viết mới nhất
+                        </div>
+                        <div class="latest_posts_container">
+
+                            <!-- Latest Post -->
+                            <div class="latest_post">
+                                <div class="latest_post_image"><img src="~/images/latest_1.jpg" alt=""></div>
+                                <div class="latest_post_content">
+                                    <div class="latest_post_title"><a href="#">Hành tinh mơ ước dành cho bạn</a></div>
+                                    <div class="latest_post_meta">
+                                        <span><a href="#">bởi Thor</a> /  15 tháng 4, 2018</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Latest Post -->
+                            <div class="latest_post">
+                                <div class="latest_post_image"><img src="~/images/latest_2.jpg" alt=""></div>
+                                <div class="latest_post_content">
+                                    <div class="latest_post_title"><a href="#">Khô máu với Thanos</a></div>
+                                    <div class="latest_post_meta">
+                                        <span><a href="#">Bởi Spiderman</a> / 12 tháng 4, 2018</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Latest Post -->
+                            <div class="latest_post">
+                                <div class="latest_post_image"><img src="~/images/latest_3.jpg" alt=""></div>
+                                <div class="latest_post_content">
+                                    <div class="latest_post_title"><a href="#">Mẹo đi du lịch khắp vũ trụ</a></div>
+                                    <div class="latest_post_meta">
+                                        <span><a href="#">bởi Captain Marvel</a> / 14 tháng 3, 2019</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Latest Post -->
+                            <div class="latest_post">
+                                <div class="latest_post_image"><img src="~/images/latest_4.jpg" alt=""></div>
+                                <div class="latest_post_content">
+                                    <div class="latest_post_title"><a href="#">Cách để vào được giới lượng tử</a></div>
+                                    <div class="latest_post_meta">
+                                        <span><a href="#">Bởi ant Man</a> / 25 tháng 4, 2019</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Instagram -->
+                    <div class="sidebar_section">
+                        <div class="sidebar_title">instagram</div>
+                        <div class="gallery_container">
+                            <ul class="gallery_items d-flex flex-row align-items-start justify-content-between flex-wrap">
+                                <li class="gallery_item">
+                                    <a class="colorbox" href="">
+                                        <img src="~/images/gallery_1.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li class="gallery_item">
+                                    <a class="colorbox" href="">
+                                        <img src="~/images/gallery_2.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li class="gallery_item">
+                                    <a class="colorbox" href="">
+                                        <img src="~/images/gallery_3.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li class="gallery_item">
+                                    <a class="colorbox" href="">
+                                        <img src="~/images/gallery_4.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li class="gallery_item">
+                                    <a class="colorbox" href="">
+                                        <img src="~/images/gallery_5.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li class="gallery_item">
+                                    <a class="colorbox" href="">
+                                        <img src="~/images/gallery_6.jpg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Hello -->
+
+                    
+
+                </div>
+            </div>
+
+
+
+
+            <!-- Listings -->
+
+            <div class="col-lg-8 listings_col">
+
+                <!-- Listings Item -->
+                <div class="listing_item">
+                    <div class="listing_item_inner d-flex flex-md-row flex-column trans_300">
+                        <div class="listing_image_container">
+                            <div class="listing_image">
+
+                                <div class="listing_background"><img style="height:400px " src="~/images/listing_1.jpg" /></div>
+                            </div>
+                            <div class="featured_card_box d-flex flex-row align-items-center trans_300">
+                                <img src="~/images/tag.svg" alt="">
+                                <div class="featured_card_box_content">
+                                    <a>
+
+                                        <div class="featured_card_price_title trans_300">Giá 2.500.000 VND</div>
+                                        <div class="btn btn-outline-light trans_300"> @Html.ActionLink("Xem phòng", "Viewroom", "Room")</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="listing_content">
+                            <div class="listing_title"><a href="listings_single.html">Phòng tại Cầu giấy</a></div>
+                            <div class="listing_text">Phòng nằm cạnh nhiều trường đại học trọng điểm, có nhiều chốt Cảnh sát Giao thông và con đường Xuân Thủy lúc nào cũng tắc.</div>
+                            <div class="rooms">
+
+                                <div class="room">
+                                    <span class="room_title">Phòng ngủ</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/bedroom.png" alt=""></div>
+                                        <span class="room_number">4</span>
+                                    </div>
+                                </div>
+
+                                <div class="room">
+                                    <span class="room_title">Phòng tắm</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/shower.png" alt=""></div>
+                                        <span class="room_number">3</span>
+                                    </div>
+                                </div>
+
+                                <div class="room">
+                                    <span class="room_title">Diện tích</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/area.png" alt=""></div>
+                                        <span class="room_number">7100 Sq Ft</span>
+                                    </div>
+                                </div>
+
+                                <div class="room">
+                                    <span class="room_title">Giường</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/patio.png" alt=""></div>
+                                        <span class="room_number">1</span>
+                                    </div>
+                                </div>
+
+                                <div class="room">
+                                    <span class="room_title">Chỗ để xe</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/garage.png" alt=""></div>
+                                        <span class="room_number">2</span>
+                                    </div>
+                                </div>
+
+                                <div class="room_tags">
+                                    <span class="room_tag"><a href="#">Nóng lạnh</a></span>
+                                    <span class="room_tag"><a href="#">Điều hòa</a></span>
+                                    <span class="room_tag"><a href="#">view</a></span>
+                                    <span class="room_tag"><a href="#">Để xe</a></span>
+                                    <span class="room_tag"><a href="#">Sàn gỗ </a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Listings Item -->
+
+                <div class="listing_item">
+                    <div class="listing_item_inner d-flex flex-md-row flex-column trans_300">
+                        <div class="listing_image_container">
+                            <div class="listing_image">
+
+                                <div class="listing_background"><img style="height:400px " src="~/images/listing_2.jpg" /></div>
+                            </div>
+                            <div class="featured_card_box d-flex flex-row align-items-center trans_300">
+                                <img src="~/images/tag.svg" alt="">
+                                <div class="featured_card_box_content">
+                                    <a>
+                                        <div class="featured_card_price_title trans_300">Giá 2.600.000 VND</div>
+                                        <div class="btn btn-outline-light trans_300"> @Html.ActionLink("Xem phòng", "Viewroom1", "Room")</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="listing_content">
+                            <div class="listing_title"><a href="listings_single.html">Phòng tại Từ Liêm</a></div>
+                            <div class="listing_text">Phòng nằm cạnh nhiều trường đại học trọng điểm, có nhiều chốt Cảnh sát Giao thông và con đường Xuân Thủy lúc nào cũng tắc.</div>
+                            <div class="rooms">
+
+                                <div class="room">
+                                    <span class="room_title">Phòng ngủ</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/bedroom.png" alt=""></div>
+                                        <span class="room_number">4</span>
+                                    </div>
+                                </div>
+
+                                <div class="room">
+                                    <span class="room_title">Phòng tắm</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/shower.png" alt=""></div>
+                                        <span class="room_number">3</span>
+                                    </div>
+                                </div>
+
+                                <div class="room">
+                                    <span class="room_title">Diện tích</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/area.png" alt=""></div>
+                                        <span class="room_number">7100 Sq Ft</span>
+                                    </div>
+                                </div>
+
+                                <div class="room">
+                                    <span class="room_title">Giường</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/patio.png" alt=""></div>
+                                        <span class="room_number">1</span>
+                                    </div>
+                                </div>
+
+                                <div class="room">
+                                    <span class="room_title">Chỗ để xe</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/garage.png" alt=""></div>
+                                        <span class="room_number">2</span>
+                                    </div>
+                                </div>
+
+                                <div class="room_tags">
+                                    <span class="room_tag"><a href="#">Nóng lạnh</a></span>
+                                    <span class="room_tag"><a href="#">Điều hòa</a></span>
+                                    <span class="room_tag"><a href="#">view</a></span>
+                                    <span class="room_tag"><a href="#">Để xe</a></span>
+                                    <span class="room_tag"><a href="#">Sàn gỗ </a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Listings Item -->
+                <div class="listing_item">
+                    <div class="listing_item_inner d-flex flex-md-row flex-column trans_300">
+                        <div class="listing_image_container">
+                            <div class="listing_image">
+
+                                <div class="listing_background"><img style="height:400px " src="~/images/listing_3.jpg" /></div>
+                            </div>
+                            <div class="featured_card_box d-flex flex-row align-items-center trans_300">
+                                <img src="~/images/tag.svg" alt="">
+                                <div class="featured_card_box_content">
+                                    <a>
+                                        <div class="featured_card_price_title trans_300">Giá 2.400.000 VND</div>
+                                        <div class="btn btn-outline-light trans_300"> @Html.ActionLink("Xem phòng", "Viewroom2", "Room")</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="listing_content">
+                            <div class="listing_title"><a href="listings_single.html">Phòng tại Trần Duy Hưng</a></div>
+                            <div class="listing_text">Phòng nằm cạnh nhiều trường đại học trọng điểm, có nhiều chốt Cảnh sát Giao thông và con đường Xuân Thủy lúc nào cũng tắc.</div>
+                            <div class="rooms">
+
+                                <div class="room">
+                                    <span class="room_title">Phòng ngủ</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/bedroom.png" alt=""></div>
+                                        <span class="room_number">4</span>
+                                    </div>
+                                </div>
+
+                                <div class="room">
+                                    <span class="room_title">Phòng tắm</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/shower.png" alt=""></div>
+                                        <span class="room_number">3</span>
+                                    </div>
+                                </div>
+
+                                <div class="room">
+                                    <span class="room_title">Diện tích</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/area.png" alt=""></div>
+                                        <span class="room_number">7100 Sq Ft</span>
+                                    </div>
+                                </div>
+
+                                <div class="room">
+                                    <span class="room_title">Giường</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/patio.png" alt=""></div>
+                                        <span class="room_number">1</span>
+                                    </div>
+                                </div>
+
+                                <div class="room">
+                                    <span class="room_title">Chỗ để xe</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/garage.png" alt=""></div>
+                                        <span class="room_number">2</span>
+                                    </div>
+                                </div>
+
+                                <div class="room_tags">
+                                    <span class="room_tag"><a href="#">Nóng lạnh</a></span>
+                                    <span class="room_tag"><a href="#">Điều hòa</a></span>
+                                    <span class="room_tag"><a href="#">view</a></span>
+                                    <span class="room_tag"><a href="#">Để xe</a></span>
+                                    <span class="room_tag"><a href="#">Sàn gỗ </a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Listings Item -->
+                <div class="listing_item">
+                    <div class="listing_item_inner d-flex flex-md-row flex-column trans_300">
+                        <div class="listing_image_container">
+                            <div class="listing_image">
+
+                                <div class="listing_background"><img style="height:400px " src="~/images/listing_4.jpg" /></div>
+                            </div>
+                            <div class="featured_card_box d-flex flex-row align-items-center trans_300">
+                                <img src="~/images/tag.svg" alt="">
+                                <div class="featured_card_box_content">
+                                    <a>
+                                        <div class="featured_card_price_title trans_300">Giá 2.500.000 VND</div>
+                                        <div class="btn btn-outline-light trans_300"> @Html.ActionLink("Xem phòng", "Viewroom", "Room")</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="listing_content">
+                            <div class="listing_title"><a href="listings_single.html">Phòng tại Hoàn Kiếm</a></div>
+                            <div class="listing_text">Phòng nằm cạnh nhiều trường đại học trọng điểm, có nhiều chốt Cảnh sát Giao thông và con đường Xuân Thủy lúc nào cũng tắc.</div>
+                            <div class="rooms">
+
+                                <div class="room">
+                                    <span class="room_title">Phòng ngủ</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/bedroom.png" alt=""></div>
+                                        <span class="room_number">4</span>
+                                    </div>
+                                </div>
+
+                                <div class="room">
+                                    <span class="room_title">Phòng tắm</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/shower.png" alt=""></div>
+                                        <span class="room_number">3</span>
+                                    </div>
+                                </div>
+
+                                <div class="room">
+                                    <span class="room_title">Diện tích</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/area.png" alt=""></div>
+                                        <span class="room_number">7100 Sq Ft</span>
+                                    </div>
+                                </div>
+
+                                <div class="room">
+                                    <span class="room_title">Giường</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/patio.png" alt=""></div>
+                                        <span class="room_number">1</span>
+                                    </div>
+                                </div>
+
+                                <div class="room">
+                                    <span class="room_title">Chỗ để xe</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/garage.png" alt=""></div>
+                                        <span class="room_number">2</span>
+                                    </div>
+                                </div>
+
+                                <div class="room_tags">
+                                    <span class="room_tag"><a href="#">Nóng lạnh</a></span>
+                                    <span class="room_tag"><a href="#">Điều hòa</a></span>
+                                    <span class="room_tag"><a href="#">view</a></span>
+                                    <span class="room_tag"><a href="#">Để xe</a></span>
+                                    <span class="room_tag"><a href="#">Sàn gỗ </a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Listings Item -->
+                <div class="listing_item">
+                    <div class="listing_item_inner d-flex flex-md-row flex-column trans_300">
+                        <div class="listing_image_container">
+                            <div class="listing_image">
+
+                                <div class="listing_background"><img style="height:400px " src="~/images/listing_5.jpg" /></div>
+                            </div>
+                            <div class="featured_card_box d-flex flex-row align-items-center trans_300">
+                                <img src="~/images/tag.svg" alt="">
+                                <div class="featured_card_box_content">
+                                    <a>
+                                        <div class="featured_card_price_title trans_300">Giá 2.500.000 VND</div>
+                                        <div class="btn btn-outline-light trans_300"> @Html.ActionLink("Xem phòng", "Viewroom", "Room")</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="listing_content">
+                            <div class="listing_title"><a href="listings_single.html">Phòng tại Hà Đông</a></div>
+                            <div class="listing_text">Phòng nằm cạnh nhiều trường đại học trọng điểm, có nhiều chốt Cảnh sát Giao thông và con đường Xuân Thủy lúc nào cũng tắc.</div>
+                            <div class="rooms">
+
+                                <div class="room">
+                                    <span class="room_title">Phòng ngủ</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/bedroom.png" alt=""></div>
+                                        <span class="room_number">4</span>
+                                    </div>
+                                </div>
+
+                                <div class="room">
+                                    <span class="room_title">Phòng tắm</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/shower.png" alt=""></div>
+                                        <span class="room_number">3</span>
+                                    </div>
+                                </div>
+
+                                <div class="room">
+                                    <span class="room_title">Diện tích</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/area.png" alt=""></div>
+                                        <span class="room_number">7100 Sq Ft</span>
+                                    </div>
+                                </div>
+
+                                <div class="room">
+                                    <span class="room_title">Giường</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/patio.png" alt=""></div>
+                                        <span class="room_number">1</span>
+                                    </div>
+                                </div>
+
+                                <div class="room">
+                                    <span class="room_title">Chỗ để xe</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/garage.png" alt=""></div>
+                                        <span class="room_number">2</span>
+                                    </div>
+                                </div>
+
+                                <div class="room_tags">
+                                    <span class="room_tag"><a href="#">Nóng lạnh</a></span>
+                                    <span class="room_tag"><a href="#">Điều hòa</a></span>
+                                    <span class="room_tag"><a href="#">view</a></span>
+                                    <span class="room_tag"><a href="#">Để xe</a></span>
+                                    <span class="room_tag"><a href="#">Sàn gỗ </a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col clearfix">
+                        <div class="listings_nav">
+                            <ul>
+                                <li class="listings_nav_item active"><a href="#">01.</a></li>
+                                <li class="listings_nav_item"><a href="#">02.</a></li>
+                                <li class="listings_nav_item"><a href="#">03.</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+       
+
+
+
+<!-- Newsletter -->
+
+<script src="~/js/jquery-3.2.1.min.js"></script>
+<script src="~/styles/bootstrap4/popper.js"></script>
+<script src="~/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="~/plugins/easing/easing.js"></script>
+<script src="~/js/listings_custom.js"></script>
+

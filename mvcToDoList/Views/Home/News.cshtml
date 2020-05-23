@@ -1,0 +1,289 @@
+﻿
+@{
+    ViewBag.Title = "News";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+<link rel="stylesheet" type="text/css" href="~/styles/bootstrap4/bootstrap.min.css">
+<link href="~/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+<link href="~/plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="~/styles/news_styles.css">
+<link rel="stylesheet" type="text/css" href="~/styles/news_responsive.css">
+<div class="news">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-8 news_content_col">
+
+                <!-- News Post -->
+                <div class="news_post">
+                    <div class="news_post_date">2 tháng 3, 2019</div>
+                    <div class="news_post_title"><a href="#">Tất cả các thứ bạn cần để sở hữu một phòng</a></div>
+                    <div class="news_post_meta">
+                        <ul>
+                            <li class="news_post_meta_item">
+                                <div class="news_post_meta_icon">
+                                    <img src="~/images/profile.svg" alt="">
+                                </div>
+                                <span><a href="#">Bởi Hulk</a></span>
+                            </li>
+                            <li class="news_post_meta_item">
+                                <div class="news_post_meta_icon">
+                                    <img src="~/images/favorite.svg" alt="">
+                                </div>
+                                <span><a href="#">Đánh Giá</a></span>
+                            </li>
+                            <li class="news_post_meta_item">
+                                <div class="news_post_meta_icon">
+                                    <img src="~/images/speech-bubble.svg" alt="">
+                                </div>
+                                <span><a href="#">3 bình luận</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="news_post_image">
+                        <img src="~/images/news_1.jpg" alt="">
+                    </div>
+                    <div class="news_post_text">
+                        <p>Chúng tôi rất hài lòng với đội ngũ AMIN và hệ thống</p>
+                    </div>
+                    <div class="button news_post_button"><a href="#">Đọc thêm</a></div>
+                </div>
+
+                <!-- News Post -->
+                <div class="news_post">
+                    <div class="news_post_date">2 tháng 3, 2019</div>
+                    <div class="news_post_title"><a href="#">Tất cả bạn cần để di chuyển phòng</a></div>
+                    <div class="news_post_meta">
+                        <ul>
+                            <li class="news_post_meta_item">
+                                <div class="news_post_meta_icon">
+                                    <img src="~/images/profile.svg" alt="">
+                                </div>
+                                <span><a href="#">Bởi Captain Marvel</a></span>
+                            </li>
+                            <li class="news_post_meta_item">
+                                <div class="news_post_meta_icon">
+                                    <img src="~/images/favorite.svg" alt="">
+                                </div>
+                                <span><a href="#">Đánh Giá</a></span>
+                            </li>
+                            <li class="news_post_meta_item">
+                                <div class="news_post_meta_icon">
+                                    <img src="~/images/speech-bubble.svg" alt="">
+                                </div>
+                                <span><a href="#">3 bình luận</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="news_post_image">
+                        <img src="~/images/news_2.jpg" alt="">
+                    </div>
+                    <div class="news_post_text">
+                        <p>Chúng tôi rất hài lòng với đội ngũ AMIN và hệ thống. </p>
+                    </div>
+                    <div class="button news_post_button"><a href="#">Đọc thêm</a></div>
+                </div>
+
+                <!-- News Post -->
+                <div class="news_post">
+                    <div class="news_post_date">2 tháng 3, 2019</div>
+                    <div class="news_post_title"><a href="#">Tất cả những thứ bạn cần để chọn phòng</a></div>
+                    <div class="news_post_meta">
+                        <ul>
+                            <li class="news_post_meta_item">
+                                <div class="news_post_meta_icon">
+                                    <img src="~/images/profile.svg" alt="">
+                                </div>
+                                <span><a href="#">Bởi Thanos</a></span>
+                            </li>
+                            <li class="news_post_meta_item">
+                                <div class="news_post_meta_icon">
+                                    <img src="~/images/favorite.svg" alt="">
+                                </div>
+                                <span><a href="#">Đánh Giá</a></span>
+                            </li>
+                            <li class="news_post_meta_item">
+                                <div class="news_post_meta_icon">
+                                    <img src="~/images/speech-bubble.svg" alt="">
+                                </div>
+                                <span><a href="#">Cả vũ trụ Bình luận</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="news_post_image">
+                        <img src="~/images/news_3.jpg" alt="">
+                    </div>
+                    <div class="news_post_text">
+                        <p>Ta là cái hiển nhiên phải tới. </p>
+                    </div>
+                    <div class="button news_post_button"><a href="#">Đọc thêm</a></div>
+                </div>
+
+                <div class="news_post_nav">
+                    <ul>
+                        <li class="news_post_nav_item active"><a href="#">01.</a></li>
+                        <li class="news_post_nav_item"><a href="#">02.</a></li>
+                        <li class="news_post_nav_item"><a href="#">03.</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 news_sidebar_col">
+                <div class="news_sidebar">
+                    <div class="sidebar_search">
+                        <form action="post">
+                            <div id="search_form" class="search_form">
+                                <input id="news_search" class="news_search" type="search" placeholder="Search" required="required" data-error="Valid keywords required.">
+                                <button id="search_submit_btn" type="submit" class="search_submit_btn trans_300" value="Submit">
+                                    <img src="~/images/search.png" alt="">
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Archives -->
+                    <div class="sidebar_section">
+                        <div class="sidebar_title">archives</div>
+                        <ul class="sidebar_list">
+                            <li class="sidebar_list_item"><a href="#">4 2019</a></li>
+                            <li class="sidebar_list_item"><a href="#">5 2019</a></li>
+                            <li class="sidebar_list_item"><a href="#">6 2019</a></li>
+                            <li class="sidebar_list_item"><a href="#">7 2019</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="sidebar_section">
+                        <div class="sidebar_title">categories</div>
+                        <ul class="sidebar_list">
+                            <li class="sidebar_list_item"><a href="#">Chưa phân loại</a></li>
+                            <li class="sidebar_list_item"><a href="#">Thông tin hữu ích</a></li>
+                            <li class="sidebar_list_item"><a href="#">Sự kiện</a></li>
+                            <li class="sidebar_list_item"><a href="#">Cách chọn phòng thông minh</a></li>
+                            <li class="sidebar_list_item"><a href="#">Chủ trọ</a></li>
+                            <li class="sidebar_list_item"><a href="#">Địa điểm phòng trọ</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Latest Posts -->
+                    <div class="sidebar_section">
+                        <div class="sidebar_title">
+                            bài viết mới nhất
+                        </div>
+                        <div class="latest_posts_container">
+
+                            <!-- Latest Post -->
+                            <div class="latest_post">
+                                <div class="latest_post_image"><img src="~/images/latest_1.jpg" alt=""></div>
+                                <div class="latest_post_content">
+                                    <div class="latest_post_title"><a href="#">Hành tinh mơ ước dành cho bạn</a></div>
+                                    <div class="latest_post_meta">
+                                        <span><a href="#">bởi Thor</a> /  15 tháng 4, 2018</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Latest Post -->
+                            <div class="latest_post">
+                                <div class="latest_post_image"><img src="~/images/latest_2.jpg" alt=""></div>
+                                <div class="latest_post_content">
+                                    <div class="latest_post_title"><a href="#">Khô máu với Thanos</a></div>
+                                    <div class="latest_post_meta">
+                                        <span><a href="#">Bởi Spiderman</a> / 12 tháng 4, 2018</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Latest Post -->
+                            <div class="latest_post">
+                                <div class="latest_post_image"><img src="~/images/latest_3.jpg" alt=""></div>
+                                <div class="latest_post_content">
+                                    <div class="latest_post_title"><a href="#">Mẹo đi du lịch khắp vũ trụ</a></div>
+                                    <div class="latest_post_meta">
+                                        <span><a href="#">bởi Captain Marvel</a> / 14 tháng 3, 2019</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Latest Post -->
+                            <div class="latest_post">
+                                <div class="latest_post_image"><img src="~/images/latest_4.jpg" alt=""></div>
+                                <div class="latest_post_content">
+                                    <div class="latest_post_title"><a href="#">Cách để vào được giới lượng tử</a></div>
+                                    <div class="latest_post_meta">
+                                        <span><a href="#">Bởi ant Man</a> / 25 tháng 4, 2019</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Instagram -->
+                    <div class="sidebar_section">
+                        <div class="sidebar_title">instagram</div>
+                        <div class="gallery_container">
+                            <ul class="gallery_items d-flex flex-row align-items-start justify-content-between flex-wrap">
+                                <li class="gallery_item">
+                                    <a class="colorbox" href="">
+                                        <img src="~/images/gallery_1.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li class="gallery_item">
+                                    <a class="colorbox" href="">
+                                        <img src="~/images/gallery_2.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li class="gallery_item">
+                                    <a class="colorbox" href="">
+                                        <img src="~/images/gallery_3.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li class="gallery_item">
+                                    <a class="colorbox" href="">
+                                        <img src="~/images/gallery_4.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li class="gallery_item">
+                                    <a class="colorbox" href="">
+                                        <img src="~/images/gallery_5.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li class="gallery_item">
+                                    <a class="colorbox" href="">
+                                        <img src="~/images/gallery_6.jpg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Hello -->
+
+                    <div class="sidebar_section">
+                        <div class="hello">
+                            <div class="footer_col_title">Phản hồi</div>
+                            <div class="footer_contact_form_container">
+                                <form id="hello_contact_form" class="footer_contact_form" action="post">
+                                    <input id="hello_contact_form_name" class="input_field contact_form_name" type="text" placeholder="Name" required="required" data-error="Name is required.">
+                                    <input id="hello_contact_form_email" class="input_field contact_form_email" type="email" placeholder="E-mail" required="required" data-error="Valid email is required.">
+                                    <textarea id="hello_contact_form_message" class="text_field contact_form_message" name="message" placeholder="Message" required="required" data-error="Please, write us a message."></textarea>
+                                    <button id="hello_contact_send_btn" type="submit" class="contact_send_btn trans_200" value="Submit">Gửi</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="~/js/jquery-3.2.1.min.js"></script>
+<script src="~/styles/bootstrap4/popper.js"></script>
+<script src="~/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="~/plugins/colorbox/jquery.colorbox-min.js"></script>
+<script src="~/js/news_custom.js"></script>
+

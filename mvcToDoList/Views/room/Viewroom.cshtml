@@ -1,0 +1,219 @@
+﻿
+@{
+    ViewBag.Title = "Viewroom";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+<link rel="stylesheet" type="text/css" href="~/styles/bootstrap4/bootstrap.min.css">
+<link href="~/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="~/styles/listings_styles.css">
+<link rel="stylesheet" type="text/css" href="~/styles/listings_responsive.css">
+
+<div class="listings">
+    <div class="container">
+        <div class="row">
+           
+            <div class="col-lg-12 listings_col">
+
+                <!-- Listings Item -->
+                <div class="listing_item">
+                    <div class="listing_item_inner d-flex flex-md-row flex-column ">
+                        <div class="listing_image_container">
+                            <div class="listing_image">
+
+                                <div class="listing_background"><img style="width:350px; height:inherit" src="~/images/listing_1.jpg" /></div>
+                            </div>
+                            <div style="height:80px" class="featured_card_box d-flex flex-row align-items-center trans_200">
+                                <img src="~/images/tag.svg" alt="">
+                                <div class="featured_card_box_content">
+                                    <a>
+                                        <div class="featured_card_price_title trans_400">Đặt cọc : 1000.000 VND</div>
+                                        <div class="featured_card_price trans_300">Giá:  2.500.000 VND</div>
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div  class="col-md-8 listing_content">
+                            <div class="listing_title"><a href="listings_single.html">Phòng tại Cầu giấy</a></div>
+                            <div class="listing_text">Phòng nằm cạnh nhiều trường đại học trọng điểm, có nhiều chốt Cảnh sát Giao thông và con đường Xuân Thủy lúc nào cũng tắc.</div>
+                            <div class="rooms">
+
+                                <div class="room">
+                                    <span class="room_title">Phòng ngủ</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/bedroom.png" alt=""></div>
+                                        <span class="room_number">4</span>
+                                    </div>
+                                </div>
+
+                                <div class="room">
+                                    <span class="room_title">Phòng tắm</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/shower.png" alt=""></div>
+                                        <span class="room_number">3</span>
+                                    </div>
+                                </div>
+
+                                <div class="room">
+                                    <span class="room_title">Diện tích</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/area.png" alt=""></div>
+                                        <span class="room_number">7100 Sq Ft</span>
+                                    </div>
+                                </div>
+
+                                <div class="room">
+                                    <span class="room_title">Giường</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/patio.png" alt=""></div>
+                                        <span class="room_number">1</span>
+                                    </div>
+                                </div>
+
+                                <div class="room">
+                                    <span class="room_title">Chỗ để xe</span>
+                                    <div class="room_content">
+                                        <div class="room_image"><img src="~/images/garage.png" alt=""></div>
+                                        <span class="room_number">2</span>
+                                    </div>
+                                </div>
+
+                                <div class="room_tags">
+                                    <span class="room_tag"><a href="#">Nóng lạnh</a></span>
+                                    <span class="room_tag"><a href="#">Điều hòa</a></span>
+                                    <span class="room_tag"><a href="#">view</a></span>
+                                    <span class="room_tag"><a href="#">Để xe</a></span>
+                                    <span class="room_tag"><a href="#">Sàn gỗ </a></span>
+                                </div>
+                                <div style="padding-left:20%">
+                                    @*<div style=" background: #fd784f;" class="btn trans_300"> @Html.ActionLink("Xem phòng", "Viewroom", "Room")</div>*@
+                                    <div style=" background: #fd784f" class="btn btn-outline-info trans_300"> @Html.ActionLink("Thuê Phòng", "Viewroom", "Room")</div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="cities">
+                <div class="cities_background"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="section_title text-center">
+                                <h3>Đưa ra những địa điểm </h3>
+                                <span class="section_subtitle">Nơi mà phù hợp với bạn</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="height:450px">
+                        <div class="col">
+
+                            <!-- Cities Slider -->
+
+                            <div class="cities_slider_container">
+                                <div class="owl-carousel owl-theme cities_slider">
+
+                                    <!-- City Item -->
+                                    <div class="owl-item city_item">
+                                        <a href="#">
+                                            <div class="city_image">
+                                                <img src="~/images/city_1.jpg" alt="">
+                                            </div>
+                                            <div class="city_details"><img src="~/images/search.png" alt=""></div>
+                                            <div class="city_name"><span>Cầu giấy</span></div>
+                                        </a>
+                                    </div>
+
+                                    <!-- City Item -->
+                                    <div class="owl-item city_item">
+                                        <a href="#">
+                                            <div class="city_image">
+                                                <img src="~/images/city_2.jpg" alt="">
+                                            </div>
+                                            <div class="city_details"><img src="~/images/search.png" alt=""></div>
+                                            <div class="city_name"><span>hà đông</span></div>
+                                        </a>
+                                    </div>
+
+                                    <!-- City Item -->
+                                    <div class="owl-item city_item">
+                                        <a href="#">
+                                            <div class="city_image">
+                                                <img src="~/images/city_3.jpg" alt="">
+                                            </div>
+                                            <div class="city_details"><img src="~/images/search.png" alt=""></div>
+                                            <div class="city_name"><span>Hoàn kiếm</span></div>
+                                        </a>
+                                    </div>
+
+                                    <!-- City Item -->
+                                    <div class="owl-item city_item">
+                                        <a href="#">
+                                            <div class="city_image">
+                                                <img src="~/images/city_4.jpg" alt="">
+                                            </div>
+                                            <div class="city_details"><img src="~/images/search.png" alt=""></div>
+                                            <div class="city_name"><span>ba đình</span></div>
+                                        </a>
+                                    </div>
+
+                                    <!-- City Item -->
+                                    <div class="owl-item city_item">
+                                        <a href="#">
+                                            <div class="city_image">
+                                                <img src="~/images/city_5.jpg" alt="">
+                                            </div>
+                                            <div class="city_details"><img src="~/images/search.png" alt=""></div>
+                                            <div class="city_name"><span>Thanh xuân</span></div>
+                                        </a>
+                                    </div>
+
+                                    <!-- City Item -->
+                                    <div class="owl-item city_item">
+                                        <a href="#">
+                                            <div class="city_image">
+                                                <img src="~/images/city_6.jpg" alt="">
+                                            </div>
+                                            <div class="city_details"><img src="~/images/search.png" alt=""></div>
+                                            <div class="city_name"><span>Hoàng mai</span></div>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                                <div class="cities_prev cities_nav d-flex flex-row align-items-center justify-content-center trans_200">
+                                    <img src="~/images/nav_left.png" alt="">
+                                </div>
+
+                                <div class="cities_next cities_nav d-flex flex-row align-items-center justify-content-center trans_200">
+                                    <img src="~/images/nav_right.png" alt="">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<!-- Newsletter -->
+
+<script src="~/js/jquery-3.2.1.min.js"></script>
+<script src="~/styles/bootstrap4/popper.js"></script>
+<script src="~/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="~/plugins/easing/easing.js"></script>
+<script src="~/js/listings_custom.js"></script>
+
